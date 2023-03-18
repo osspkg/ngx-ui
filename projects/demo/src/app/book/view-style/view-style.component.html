@@ -1,0 +1,17 @@
+<br><br>
+
+<h5>Code</h5>
+
+<div class="m-1">
+    <i>Attributes</i>:
+    <ul [type]="'disc'" class="mt-1">
+        <li *ngFor="let item of data.attributes|map2slice" class="ml-3"><b>{{item.key}}</b>  -  <i>{{item.value}}</i></li>
+    </ul>
+</div>
+
+<div class="m-1">
+    <i>Example</i>: <pre class="mt-1">{{data.example}}</pre>
+</div>
+
+<h5 class="mt-1">Preview</h5>
+<div class="m-1" [innerHTML]="data.demo|safeHtml"></div>

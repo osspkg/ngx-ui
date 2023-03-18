@@ -1,0 +1,14 @@
+<div class="{{color|dash:'check--color'}}">
+    <div class="check_group">
+        <div class="check_group--button click" (click)="toggle(!value)">
+            <div
+                    [ngClass]="{
+        'check_group--button-on': value,
+        'check_group--button-off': !value
+      }"
+            ></div>
+        </div>
+        <span class="check_group--title" [title]="title" *ngIf="title.length > 0">{{ title }}</span>
+    </div>
+</div>
+

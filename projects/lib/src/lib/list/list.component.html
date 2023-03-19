@@ -1,14 +1,14 @@
 <div class="{{color|dash:'list--color'}} {{style|dash:'list--style'}}">
     <ul class="list__group">
         <li
-                *ngFor="let item of data"
+                *ngFor="let item of contents"
                 (click)="emitData(item.key)"
                 [class.list__item--active]="key === item.key"
                 class="list__item click"
         >
 
-            <div class="list__item-name">{{item.name}}</div>
-            <div *ngIf="item.desc" class="list__item-desc">{{item.desc}}</div>
+            <div class="list__item-name" [tmpl-out]="item.template"></div>
+<!--            <div *ngIf="item.desc" class="list__item-desc">{{item.desc}}</div>-->
         </li>
     </ul>
 </div>

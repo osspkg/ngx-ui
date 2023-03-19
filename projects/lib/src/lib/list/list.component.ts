@@ -1,4 +1,13 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  ContentChildren,
+  Directive,
+  EventEmitter,
+  Input,
+  Output,
+  QueryList,
+  TemplateRef,
+} from '@angular/core';
 import { ColorsShort } from '../core/variables';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -7,12 +16,15 @@ export type ListStyle = 'box' | 'btn' | 'line';
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-export interface ListData {
-  key: string;
+@Directive({
+  // eslint-disable-next-line @angular-eslint/directive-selector
+  selector: 'ng-template[list-item]',
+})
+export class ListItemDirective {
+  @Input('list-item') key!: string;
 
-  name: string;
-
-  desc?: string;
+  constructor(public template: TemplateRef<unknown>) {
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -22,16 +34,11 @@ export interface ListData {
   templateUrl: './list.component.html',
 })
 export class ListComponent {
-  @Input() key: string = '';
-
+  @Input() key = '';
   @Output() keyChange = new EventEmitter<string>();
-
   @Input() color: ColorsShort = 'secondary';
-
   @Input() style: ListStyle = 'box';
-
-  @Input() data: ListData[] = [];
-
+  @ContentChildren(ListItemDirective) contents!: QueryList<ListItemDirective>;
   @Output() selected = new EventEmitter<string>();
 
   emitData(key: string): void {

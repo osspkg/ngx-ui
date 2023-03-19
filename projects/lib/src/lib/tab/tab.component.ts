@@ -28,7 +28,7 @@ export type TabStyle = 'btn' | 'line';
 export class TabDirective {
   @Input() tab!: string;
 
-  constructor(public template: TemplateRef<any>) {
+  constructor(public template: TemplateRef<unknown>) {
   }
 }
 
@@ -40,22 +40,16 @@ export class TabDirective {
 })
 export class TabComponent implements AfterContentInit, AfterViewInit {
 
-  private embeddedViewRef?: EmbeddedViewRef<any>;
+  private embeddedViewRef?: EmbeddedViewRef<unknown>;
 
   curr?: string;
-
   tabs: string[] = [];
 
-  @Input() default: string = '';
-
+  @Input() default = '';
   @Input() color: ColorsFull = 'secondary';
-
   @Input() style: TabStyle = 'btn';
-
   @Output() switch: EventEmitter<string> = new EventEmitter<string>();
-
   @ViewChild('content', { static: false }) out!: ElementRef;
-
   @ContentChildren(TabDirective) contents!: QueryList<TabDirective>;
 
   constructor(

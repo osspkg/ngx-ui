@@ -1,0 +1,72 @@
+@use "sass:map";
+@use "../core/variables" as glob;
+
+:host {
+  display: block;
+}
+
+.check_group {
+  padding: glob.$uxwb-padding-y-size glob.$uxwb-padding-x-size;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  &--button {
+    display: block;
+    position: relative;
+    border-style: solid;
+    border-width: glob.$uxwb-line-size;
+    border-radius: glob.$uxwb-radius-size*5;
+    width: glob.$uxwb-base-size*2.5;
+    background-color: glob.var-color-bg('-light');
+  }
+
+  &--button-on, &--button-off {
+    border-radius: glob.$uxwb-radius-size*8;
+    padding: glob.$uxwb-padding-y-size glob.$uxwb-padding-x-size;
+    width: glob.$uxwb-line-size*.5;
+    border-style: solid;
+    border-width: glob.$uxwb-line-size;
+    margin: -1px;
+    position: relative;
+  }
+
+  &--button-on {
+    float: right;
+  }
+
+  &--button-off {
+    float: left;
+  }
+
+  &--title {
+    display: block;
+    position: relative;
+    padding-left: glob.$uxwb-padding-x-size;
+    font-size: glob.$uxwb-base-size;
+  }
+}
+
+@each $c, $v in glob.$uxwb-colors {
+  .check--color#{$c} {
+    .check_group {
+      &--button {
+        border-color: glob.var-color-bg($c);
+      }
+
+      &--button-on {
+        background-color: glob.var-color-bg($c);
+        border-color: glob.var-color-bg($c);
+      }
+
+      &--button-off {
+        border-color: glob.var-color-bg($c);
+        background-color: glob.var-color-bg('-light');
+      }
+
+      &--title {
+        color: glob.var-color-bg($c);
+      }
+    }
+  }
+}

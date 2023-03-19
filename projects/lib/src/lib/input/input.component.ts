@@ -16,17 +16,12 @@ export class InputComponent implements OnDestroy {
   private sub$?: Subscription;
 
   value = '';
-
   buffer = '';
-
   changed = false;
   
   @Input() title?: string;
-
   @Input() color: ColorsShort = 'dark';
-
   @Input() type: Type = 'text';
-
   @Input()
   set data(value: string) {
     this.value = value;

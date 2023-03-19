@@ -1,0 +1,32 @@
+<ng-template #def>
+    {{placeholder}}
+</ng-template>
+
+<div *ngIf="_show" class="{{color|dash:'select--color'}}">
+    <div class="select__group">
+        <label *ngIf="title && title.length > 0">{{ title }}</label>
+
+        <div class="select__group--result" [tmpl-out]="curr"></div>
+
+        <div *ngIf="_popup" class="select__popup">
+            <div *ngIf="contents.length >max" class="select__popup--search">
+                <input type="text" [(ngModel)]="filter" [placeholder]="'write filter'"/>
+            </div>
+
+            <div class="select__popup--list">
+                <ng-container *ngFor="let item of contents">
+                    <div
+                            class="click select__popup--list-item"
+                            (click)="emitData(item.key, item.template)"
+                            [tmpl-out]="item.template" #dd
+                            *ngIf="item.template|tmplFilter: filter: contents.length >max"
+                    ></div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

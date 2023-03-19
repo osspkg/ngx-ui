@@ -33,7 +33,7 @@
 
 
 @each $c, $v in glob.$uxwb-colors {
-  .input--color#{$c} {
+  .check--color#{$c} {
     .input__group {
       border-color: glob.var-color-line($c);
     }

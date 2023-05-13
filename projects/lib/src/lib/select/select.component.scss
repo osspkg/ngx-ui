@@ -1,10 +1,6 @@
 @use "sass:map";
 @use "../core/variables" as glob;
 
-:host {
-  display: block;
-}
-
 .select__group {
   position: relative;
   border-style: solid;

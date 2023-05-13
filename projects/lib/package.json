@@ -1,17 +1,17 @@
 {
-  "name": "@uxwb/components",
-  "version": "14.1.0",
+  "name": "@uxwb/ngx-ui",
+  "version": "1.0.0",
   "description": "UI components for Angular",
-  "author": "@uxwb <uxwb@dewep.pro> (https://github.com/deweppro)",
+  "author": "dewep team <uxwb@dewep.pro> (https://github.com/deweppro)",
   "license": "BSD-3-Clause",
-  "homepage": "https://uxwb.ru",
-  "funding": "https://sobe.ru/na/X2R2S0s9u1d8",
+  "homepage": "https://ngx-ui.uxwb.ru",
+  "funding": "https://uxwb.ru/donate",
   "bugs": {
-    "url": "https://github.com/uxwb/components/issues"
+    "url": "https://github.com/uxwb/ngx-ui/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/uxwb/components.git"
+    "url": "https://github.com/uxwb/ngx-ui.git"
   },
   "keywords": [
     "angular2",
@@ -20,10 +20,10 @@
     "web-components"
   ],
   "peerDependencies": {
-    "@angular/common": "^14.0.0",
-    "@angular/core": "^14.0.0",
-    "@angular/forms": "^14.0.0",
-    "rxjs": "~7.5.0"
+    "@angular/common": ">=14.0.0",
+    "@angular/core": ">=14.0.0",
+    "@angular/forms": ">=14.0.0",
+    "rxjs": ">=7.5.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

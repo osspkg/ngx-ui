@@ -10,6 +10,5 @@ export interface ComponentBook {
   tag: string;
   component: any;
   attributes: { [title: string]: string }
-  demo: { [title: string]: unknown }[];
   example: string;
 }

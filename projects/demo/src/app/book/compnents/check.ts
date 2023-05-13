@@ -1,6 +1,19 @@
-import { CheckComponent } from '../../../../../lib/src/lib/check/check.component';
+import { Component } from '@angular/core';
 import { ComponentBook } from '../book';
 
+@Component({
+  selector: 'app-check-book',
+  template: `
+      <uxwb-check [title]="'demo'" [color]="'info'"></uxwb-check>
+      <uxwb-check [title]="'demo'" [color]="'warning'"></uxwb-check>
+      <uxwb-check [title]="'demo'" [color]="'danger'"></uxwb-check>
+      <uxwb-check [title]="'demo'" [color]="'success'"></uxwb-check>
+      <uxwb-check [title]="'demo'" [color]="'secondary'"></uxwb-check>
+      <uxwb-check [title]="'demo'" [color]="'dark'"></uxwb-check>
+      <uxwb-check [title]="'demo'" [color]="'primary'"></uxwb-check>
+  `,
+})
+// eslint-disable-next-line @angular-eslint/component-class-suffix
 export class CheckBook implements ComponentBook {
   link = 'Check';
   tag = 'uxwb-check';
@@ -10,18 +23,8 @@ export class CheckBook implements ComponentBook {
     color: 'color scheme ( \'secondary\' | \'warning\' | \'danger\' | \'success\' | \'info\' | \'primary\' | \'dark\')',
   };
 
-  component = CheckComponent;
+  component = CheckBook;
   example = `
 <uxwb-check [title]="'demo'" [color]="'info'" [(value)]="valueBool"></uxwb-check>
   `;
-
-  demo = [
-    { title: 'text', value: true, color: 'secondary' },
-    { title: 'text', value: true, color: 'warning' },
-    { title: 'text', value: true, color: 'danger' },
-    { title: 'text', value: true, color: 'success' },
-    { title: 'text', value: true, color: 'info' },
-    { title: 'text', value: true, color: 'primary' },
-    { title: 'text', value: true, color: 'dark' },
-  ];
 }

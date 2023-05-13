@@ -1955,6 +1955,11 @@
     "@typescript-eslint/types" "5.55.0"
     eslint-visitor-keys "^3.3.0"
 
+"@uxwb/icons@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@uxwb/icons/-/icons-0.0.7.tgz#33b253f40e73a3cb013abf51c57b74885ab1b2a4"
+  integrity sha512-UeZwY3L/gQcQmYyNpjlI4Mg2x/zHOIPvoJlz5mGGfPkj01di7s2sQwpme656EihrvRevdN2l/aZGvFgvnjo8yQ==
+
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.11.1.tgz#2bfd767eae1a6996f432ff7e8d7fc75679c0b6a7"

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { UxwbComponentsModule } from '../../../lib/src/lib/components.module';
+import { UXWBUIModule } from '../../../lib/src/lib/components.module';
 import { AppComponent } from './app.component';
 import { Map2SlicePipe, SafeHtmlPipe } from './book/base.pipe';
 import { ComponentsModule } from './book/compnents/components.module';
@@ -19,7 +19,7 @@ import { ViewStyleComponent } from './book/view-style/view-style.component';
   ],
   imports: [
     BrowserModule,
-    UxwbComponentsModule,
+    UXWBUIModule,
     ComponentsModule,
   ],
   providers: [],

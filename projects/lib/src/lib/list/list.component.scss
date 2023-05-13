@@ -1,10 +1,6 @@
 @use "sass:map";
 @use "../core/variables" as glob;
 
-:host {
-  display: block;
-}
-
 .list__group {
   .list__item {
     list-style: none;

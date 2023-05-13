@@ -9,7 +9,7 @@ import {
   Output, QueryList,
   TemplateRef, ViewChild,
 } from '@angular/core';
-import { ColorsShort } from 'projects/lib/src/lib/core/variables';
+import { ColorsShort } from '../core/variables';
 
 @Directive({
   // eslint-disable-next-line @angular-eslint/directive-selector

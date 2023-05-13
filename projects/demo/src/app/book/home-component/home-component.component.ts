@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home-component',
@@ -8,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponentComponent {
 
   moduleText = `
-import { UxwbComponentsModule } from "@uxwb/components";
+import { UXWBUIModule } from '@uxwb/ngx-ui';
 
 @NgModule({
   ...
   imports: [
     ...
-    UxwbComponentsModule,
+    UXWBUIModule,
   ],
-  ...
+...
 })
   `;
 

@@ -5,23 +5,23 @@ import { ComponentBook } from '../book';
   selector: 'app-tab-book',
   template: `
       <div class="r">
-      <uxwb-tab class="c6" [default]="'Tab1'" [color]="'warning'" [style]="'btn'">
-          <ng-template [tab]="'Tab1'">
-              tab 1
-          </ng-template>
-          <ng-template [tab]="'Tab2'">
-              tab 2
-          </ng-template>
-      </uxwb-tab>
+          <uxwb-tab class="c6" [default]="'Tab1'" [color]="'warning'" [style]="'btn'">
+              <ng-template [tab]="'Tab1'">
+                  tab 1
+              </ng-template>
+              <ng-template [tab]="'Tab2'">
+                  tab 2
+              </ng-template>
+          </uxwb-tab>
 
-      <uxwb-tab class="c6" [default]="'Tab1'" [color]="'warning'" [style]="'line'">
-          <ng-template [tab]="'Tab1'">
-              tab 1
-          </ng-template>
-          <ng-template [tab]="'Tab2'">
-              tab 2
-          </ng-template>
-      </uxwb-tab>
+          <uxwb-tab class="c6" [default]="'Tab1'" [color]="'warning'" [style]="'line'">
+              <ng-template [tab]="'Tab1'">
+                  tab 1
+              </ng-template>
+              <ng-template [tab]="'Tab2'">
+                  tab 2
+              </ng-template>
+          </uxwb-tab>
       </div>
   `,
 })

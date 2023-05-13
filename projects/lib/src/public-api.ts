@@ -10,5 +10,7 @@ export * from './lib/list/list.component';
 export * from './lib/input/input.component';
 export * from './lib/select/select.component';
 export * from './lib/check/check.component';
+export * from './lib/menu/menu.component';
+export * from './lib/nav/nav.component';
 
 export * from './lib/components.module';

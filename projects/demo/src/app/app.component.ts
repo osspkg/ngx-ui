@@ -3,6 +3,8 @@ import { ComponentBook, StyleBook } from 'projects/demo/src/app/book/book';
 import { CheckBook } from './book/compnents/check';
 import { InputBook } from './book/compnents/input';
 import { ListBook } from './book/compnents/list';
+import { MenuBook } from './book/compnents/menu';
+import { NavBook } from './book/compnents/nav';
 import { SelectBook } from './book/compnents/select';
 import { TabsBook } from './book/compnents/tabs';
 import { BlockquotesBook } from './book/styles/blockquotes';
@@ -52,6 +54,8 @@ export class AppComponent {
     new ListBook(),
     new SelectBook(),
     new CheckBook(),
+    new NavBook(),
+    new MenuBook(),
   ];
 
   styleList: StyleBook[] = [

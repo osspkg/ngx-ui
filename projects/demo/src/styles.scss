@@ -1,12 +1,4 @@
-@import "projects/lib/src/lib/core";
+@import "../../lib/src/lib/core";
+@import "@uxwb/icons";
 
 
-ul {
-  list-style: none;
-}
-
-pre, code {
-  border: 1px dotted lightgray;
-  padding: 1rem;
-  border-radius: 1rem;
-}

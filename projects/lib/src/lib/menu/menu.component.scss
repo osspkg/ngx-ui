@@ -1,0 +1,54 @@
+@use "sass:map";
+@use "../core/variables" as glob;
+
+.menu {
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 15rem;
+
+  border-style: solid;
+  border-width: 0 glob.$uxwb-line-size 0 0;
+
+  display: flex;
+  align-items: normal;
+  flex-direction: column;
+
+  a, a:link, a:visited, a:active, a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+  }
+
+  hr {
+    border-width: glob.$uxwb-line-size 0 0 0;
+    border-style: solid;
+  }
+
+  &__header, &__footer {
+    min-height: 10vh;
+    align-items: center;
+    display: inline-flex;
+  }
+
+  &__body {
+    padding-top: glob.$uxwb-margin-x-size*3;
+    padding-bottom: glob.$uxwb-margin-x-size*3;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+@each $c, $v in glob.$uxwb-colors {
+  .menu--color#{$c}.menu {
+    background-color: glob.var-color-bg("-light");
+
+    border-color: glob.var-color-bg($c);
+
+    * {
+      color: glob.var-color-bg($c);
+      border-color: glob.var-color-bg($c);
+    }
+  }
+}

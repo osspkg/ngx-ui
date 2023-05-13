@@ -26,16 +26,10 @@ export class ViewComponentComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-
-    this.data.demo.forEach(value => {
-      const ref = this.code.createComponent(this.data.component);
-      (ref.location.nativeElement as HTMLElement).classList.add('c');
-      Object.keys(value).forEach((key: string) => {
-        ref.setInput(key, value[key]);
-      });
-      ref.hostView.detectChanges();
-      this.refs.push(ref);
-    });
+    const ref = this.code.createComponent(this.data.component);
+    (ref.location.nativeElement as HTMLElement).classList.add('c');
+    ref.hostView.detectChanges();
+    this.refs.push(ref);
   }
 
   ngOnDestroy(): void {

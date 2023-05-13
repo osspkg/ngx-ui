@@ -1,10 +1,6 @@
 @use "sass:map";
 @use "../core/variables" as glob;
 
-:host {
-  display: block;
-}
-
 .input__group {
   position: relative;
   border-style: solid;
@@ -33,17 +29,17 @@
 
 
 @each $c, $v in glob.$uxwb-colors {
-  .check--color#{$c} {
+  .input--color#{$c} {
     .input__group {
       border-color: glob.var-color-line($c);
-    }
 
-    input {
-      color: glob.var-color-bg('-dark');
-    }
+      input {
+        color: glob.var-color-bg('-dark');
+      }
 
-    label {
-      color: glob.var-color-bg($c);
+      label {
+        color: glob.var-color-bg($c);
+      }
     }
   }
 }

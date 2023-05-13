@@ -1,0 +1,29 @@
+<div class="nav {{color|dash:'nav--color'}} {{size|dash:'nav--size'}}">
+  <div *ngIf="logo !==undefined" class="nav__logo">
+    <a [href]="logo.link">
+      <img [src]="logo.ico" [alt]="logo.title">
+      {{logo.title}}
+    </a>
+  </div>
+
+  <ul class="nav__links">
+    <li *ngFor="let item of links" class="nav__links--item">
+      <a *ngIf="item.link !== undefined" [href]="item.link" class="nav__links--item-link">
+        <i *ngIf="item.ico !== undefined" [class]="item.ico">&nbsp;</i>
+        {{item.title}}
+      </a>
+      <span *ngIf="item.link === undefined" class="nav__links--item-link">
+        <i *ngIf="item.ico !== undefined" [class]="item.ico">&nbsp;</i>
+        {{item.title}}
+      </span>
+      <ul *ngIf="item.group !== undefined" class="nav__links__sub">
+        <li *ngFor="let sub of item.group" class="nav__links__sub--item">
+          <a [href]="sub.link" class="nav__links__sub--item-link">
+            <i *ngIf="sub.ico !== undefined" [class]="sub.ico">&nbsp;</i>
+            {{sub.title}}
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
